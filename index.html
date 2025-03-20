@@ -1,37 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebXR AR Demo</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>WebXR Demo</title>
 </head>
 <body>
+    <h1>Selamat datang di WebXR Demo!</h1>
     <button id="startARButton">Mulai AR</button>
-
     <script>
-        async function startAR() {
-            if (navigator.xr && navigator.xr.isSessionSupported) {
-                const supported = await navigator.xr.isSessionSupported("immersive-ar");
-                if (supported) {
-                    const xrSession = await navigator.xr.requestSession("immersive-ar");
-                    console.log("AR mode started!", xrSession);
-                } else {
-                    alert("AR tidak didukung di perangkat ini!");
-                }
-            } else {
-                alert("WebXR tidak tersedia di browser ini!");
-            }
-        }
-
         document.getElementById("startARButton").addEventListener("click", function () {
-            alert("Tombol diklik!");
-            console.log("Tombol diklik!");
-            startAR();
+            alert("Fitur AR belum didukung atau sedang dalam pengembangan.");
         });
     </script>
-
-    <!-- Perbaikan: Meletakkan script.js di luar tag <script> -->
-    <script src="script.js" defer></script>
 </body>
 </html>
